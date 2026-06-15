@@ -1,0 +1,15 @@
+<h1>Bem-vindo, {{ usuario }}</h1>
+
+<a href="/criar-projeto">
+    Criar Projeto
+</a>
+
+<hr>
+
+{% for projeto in projetos %}
+
+    <h3>{{ projeto[1] }}</h3>
+
+    <p>{{ projeto[2] }}</p>
+
+{% endfor %}
