@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+
+Histórico
+
+</title>
+
+</head>
+
+<body>
+
+<h1>
+
+Histórico de Versões
+
+</h1>
+
+{% for versao in versoes %}
+
+<hr>
+
+<h2>
+
+{{ versao[2] }}
+
+</h2>
+
+<p>
+
+{{ versao[3] }}
+
+</p>
+
+{% endfor %}
+
+</body>
+
+</html>

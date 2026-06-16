@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Repositórios GitHub</title>
+</head>
+
+<body>
+
+<h1>Meus Repositórios</h1>
+
+<form action="/github/criar" method="POST">
+
+    <input
+        type="text"
+        name="nome"
+        placeholder="Nome do repositório"
+        required>
+
+    <button type="submit">
+        Criar Repositório
+    </button>
+
+</form>
+
+<hr>
+
+{% for repo in repositorios %}
+
+<h3>{{ repo.name }}</h3>
+
+<p>{{ repo.description }}</p>
+
+<a href="{{ repo.html_url }}">
+    Abrir no GitHub
+</a>
+
+<hr>
+
+{% endfor %}
+
+</body>
+
+</html>

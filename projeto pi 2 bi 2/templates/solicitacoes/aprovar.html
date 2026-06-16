@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>Solicitação</h1>
+
+<p>
+
+Projeto:
+
+{{ solicitacao[1] }}
+
+</p>
+
+<p>
+
+Status:
+
+{{ solicitacao[2] }}
+
+</p>
+
+<form method="POST">
+
+<button
+type="submit"
+name="status"
+value="APROVADO">
+
+Aprovar
+
+</button>
+
+<button
+type="submit"
+name="status"
+value="REJEITADO">
+
+Rejeitar
+
+</button>
+
+</form>
+
+</body>
+
+</html>

@@ -1,17 +1,63 @@
-<h1>Dashboard</h1>
+<!DOCTYPE html>
 
-<a href="/criar-projeto">
-    Criar Projeto
-</a>
+<html>
+
+<head>
+
+<title>
+
+Projeto
+
+</title>
+
+</head>
+
+<body>
+
+<h1>
+
+{{ projeto[1] }}
+
+</h1>
+
+<p>
+
+{{ projeto[2] }}
+
+</p>
 
 <hr>
 
-{% for projeto in projetos %}
+<a href="/versoes/{{ projeto[0] }}">
 
-    <h3>{{ projeto[1] }}</h3>
+Histórico de versões
 
-    <p>{{ projeto[2] }}</p>
+</a>
 
-    <hr>
+<br><br>
 
-{% endfor %}
+<a href="/projeto/{{ projeto[0] }}/duplicar">
+
+Criar Projeto Individual
+
+</a>
+
+<br><br>
+
+<a href="/projeto/{{ projeto[0] }}/membros">
+
+Gerenciar membros
+
+</a>
+
+<br><br>
+
+<a href="/solicitacoes">
+
+Solicitações
+
+</a>
+
+</body>
+
+</html>
