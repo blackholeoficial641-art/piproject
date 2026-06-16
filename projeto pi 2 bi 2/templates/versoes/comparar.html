@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>
+
+Comparação
+
+</h1>
+
+<h2>
+
+Arquivos adicionados
+
+</h2>
+
+{% for arquivo in comparacao.adicionados %}
+
+<p>
+
+{{ arquivo }}
+
+</p>
+
+{% endfor %}
+
+<h2>
+
+Arquivos removidos
+
+</h2>
+
+{% for arquivo in comparacao.removidos %}
+
+<p>
+
+{{ arquivo }}
+
+</p>
+
+{% endfor %}
+
+<h2>
+
+Arquivos modificados
+
+</h2>
+
+{% for arquivo in comparacao.modificados %}
+
+<p>
+
+{{ arquivo }}
+
+</p>
+
+{% endfor %}
+
+</body>
+
+</html>

@@ -1,19 +1,23 @@
-import psycopg
+from supabase import create_client
+
 from config import Config
 
-def conectar():
-    return psycopg.connect(
-        host=Config.DB_HOST,
-        port=Config.DB_PORT,
-        dbname=Config.DB_NAME,
-        user=Config.DB_USER,
-        password=Config.DB_PASSWORD
+
+class SupabaseService:
+
+    client = create_client(
+        Config.SUPABASE_URL,
+        Config.SUPABASE_KEY
     )
 
-def testar_conexao():
-    try:
-        conn = conectar()
-        conn.close()
-        print("Conexão realizada com sucesso!")
-    except Exception as e:
-        print(f"Erro ao conectar: {e}")
+    @staticmethod
+    def upload(nome, caminho):
+
+        with open(caminho, "rb") as arquivo:
+
+            SupabaseService.client.storage.from_("imagens").upload(
+                nome,
+                arquivo
+            )
+
+        return nome

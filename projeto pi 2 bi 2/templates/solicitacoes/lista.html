@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>Solicitações</h1>
+
+<hr>
+
+{% for solicitacao in solicitacoes %}
+
+<p>
+
+Projeto Individual {{ solicitacao[1] }}
+
+Status:
+
+{{ solicitacao[2] }}
+
+<a href="/solicitacao/{{ solicitacao[0] }}">
+
+Abrir
+
+</a>
+
+</p>
+
+{% endfor %}
+
+</body>
+
+</html>
