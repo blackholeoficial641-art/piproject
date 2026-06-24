@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        {% block titulo %}
+        PI Versionamento
+        {% endblock %}
+    </title>
+
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="/">Início</a>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/github">GitHub</a>
+
+<a href="/drive">Drive</a>
+
+<a href="/imagens">Imagens</a>
+
+<a href="/logout">Sair</a>
+
+</nav>
+
+<hr>
+
+{% block conteudo %}
+
+{% endblock %}
+
+<script
+src="{{ url_for('static', filename='js/dashboard.js') }}">
+</script>
+
+</body>
+
+</html>

@@ -56,3 +56,21 @@ class Projeto:
         conn.close()
 
         return projetos
+    @staticmethod
+    def buscar(id_projeto):
+
+        conn = conectar()
+        cur = conn.cursor()
+
+        cur.execute("""
+            SELECT *
+            FROM projetos
+            WHERE id = %s
+        """, (id_projeto,))
+
+        projeto = cur.fetchone()
+
+        cur.close()
+        conn.close()
+
+        return projeto
